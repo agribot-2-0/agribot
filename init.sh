@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-git clone https://github.com/panpawelchmiel/agribot_drivers.git drivers
-git clone https://github.com/panpawelchmiel/agribot_configs.git configs
-git clone https://github.com/panpawelchmiel/agribot_base.git workspace/base_ws/src
-git clone https://github.com/panpawelchmiel/agribot_hal.git workspace/hal_ws/src
+export AGRIBOT_HOME=$HOME
 
-if [ "$1" == "simulation" ]
-then
-    git clone https://github.com/panpawelchmiel/agribot_simulation.git workspace/simulation_ws/src
-fi
+cd $AGRIBOT_HOME/agribot/workspace/base_ws/src
+git submodule update --init
+
+cd $AGRIBOT_HOME/agribot/workspace/hal_ws/src
+git submodule update --init
