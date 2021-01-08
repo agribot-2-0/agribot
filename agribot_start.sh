@@ -6,10 +6,6 @@ source /opt/ros/melodic/setup.bash
 source $AGRIBOT_HOME/agribot/workspace/base_ws/install/setup.bash
 source $AGRIBOT_HOME/agribot/configs/simulation/config.bash
 
-# export ROS_MASTER_URI=http://192.168.0.110:11311
-# export ROS_MASTER_URI=http://127.0.0.1:11311
-# export ROS_IP=192.168.0.112
-
 # roscore &
 
 # sleep 30

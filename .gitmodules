@@ -13,3 +13,9 @@
 [submodule "workspace/simulation_ws/src/agribot_simulation"]
 	path = workspace/simulation_ws/src/agribot_simulation
 	url = https://github.com/panpawelchmiel/agribot_simulation.git
+[submodule "router"]
+	path = router
+	url = https://github.com/panpawelchmiel/agribot_router.git
+[submodule "cloud"]
+	path = cloud
+	url = https://github.com/panpawelchmiel/agribot_cloud.git
