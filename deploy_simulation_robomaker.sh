@@ -12,11 +12,15 @@ cp -r $AGRIBOT_HOME/agribot/configs ./install/agribot
 colcon bundle
 
 cd $AGRIBOT_HOME/agribot/workspace/simulation_ws
+cp -r $AGRIBOT_HOME/agribot/workspace/base_ws/src/agribot_msgs src
+cp -r $AGRIBOT_HOME/agribot/workspace/base_ws/src/agribot_description src
 # rm -rf build/ bundle/ install/ log/
 colcon build
 mkdir ./install/agribot/configs -p
 cp -r $AGRIBOT_HOME/agribot/configs ./install/agribot
 colcon bundle
+rm -r src/agribot_msgs
+rm -r src/agribot_description
 
 cd $AGRIBOT_HOME/agribot/workspace
 docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli s3 cp /aws/base_ws/bundle/output.tar s3://agribot/agribot/base_ws/bundle/output.tar
