@@ -1,0 +1,21 @@
+[submodule "drivers"]
+	path = drivers
+	url = https://github.com/panpawelchmiel/agribot_drivers.git
+[submodule "configs"]
+	path = configs
+	url = https://github.com/panpawelchmiel/agribot_configs.git
+[submodule "workspace/base_ws/src"]
+	path = workspace/base_ws/src
+	url = https://github.com/panpawelchmiel/agribot_base.git
+[submodule "workspace/hal_ws/src"]
+	path = workspace/hal_ws/src
+	url = https://github.com/panpawelchmiel/agribot_hal.git
+[submodule "workspace/simulation_ws/src/agribot_simulation"]
+	path = workspace/simulation_ws/src/agribot_simulation
+	url = https://github.com/panpawelchmiel/agribot_simulation.git
+[submodule "router"]
+	path = router
+	url = https://github.com/panpawelchmiel/agribot_router.git
+[submodule "cloud"]
+	path = cloud
+	url = https://github.com/panpawelchmiel/agribot_cloud.git
