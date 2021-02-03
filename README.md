@@ -1,23 +1,29 @@
+## Source agribot
+
+```
+source agribot/configs/setup.bash
+```
+
 ## Repository initialization
 
 ```
-./init.sh
+agribot_workspace_init.sh
 ```
 
 ## Build all repositories 
 
 ```
-./build_workspace.sh
+agribot_workspace_build.sh
 ```
 
 ## Start robot software in simulation
 
 ```
-./agribot_start.sh simulation
+agribot_start.sh simulation
 ```
 
 ## Start robot software on agribot hardware
 
 ```
-./agribot_start.sh
+agribot_start.sh
 ```
