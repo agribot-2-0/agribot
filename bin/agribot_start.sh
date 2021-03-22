@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source $HOME/agribot/configs/setup.bash
+export AGRIBOT_HOME=$HOME
 
 
 if [ "$1" == "simulation" ]
