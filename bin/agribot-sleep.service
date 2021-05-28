@@ -1,0 +1,7 @@
+[Unit]
+
+[Service]
+ExecStart=/home/agribot1/agribot/bin/advantech_local_sleep.sh
+
+[Install]
+WantedBy=default.target

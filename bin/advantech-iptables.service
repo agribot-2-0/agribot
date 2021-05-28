@@ -1,0 +1,7 @@
+[Unit]
+
+[Service]
+ExecStart=/home/agribot1/agribot/bin/advantech_fcserver.sh
+
+[Install]
+WantedBy=default.target
