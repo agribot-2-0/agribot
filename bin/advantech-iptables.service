@@ -1,7 +1,7 @@
 [Unit]
 
 [Service]
-ExecStart=/home/agribot1/agribot/bin/advantech_fcserver.sh
+ExecStart=/home/agribot1/agribot/bin/advantech_setup_iptables.sh
 
 [Install]
 WantedBy=default.target
