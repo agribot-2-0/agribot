@@ -5,7 +5,10 @@ export AGRIBOT_HOME=$HOME
 source /opt/ros/melodic/setup.bash
 
 cd $AGRIBOT_HOME/agribot/workspace/base_ws
-# rm -rf build/ bundle/ install/ log/
+if [ "$1" == "rebuild" ]
+then
+    rm -rf build/ bundle/ install/ log/
+fi
 colcon build
 mkdir ./install/agribot/configs -p
 cp -r $AGRIBOT_HOME/agribot/configs ./install/agribot
@@ -14,7 +17,10 @@ colcon bundle
 cd $AGRIBOT_HOME/agribot/workspace/simulation_ws
 cp -r $AGRIBOT_HOME/agribot/workspace/base_ws/src/agribot_msgs src
 cp -r $AGRIBOT_HOME/agribot/workspace/base_ws/src/agribot_description src
-# rm -rf build/ bundle/ install/ log/
+if [ "$1" == "rebuild" ]
+then
+    rm -rf build/ bundle/ install/ log/
+fi
 colcon build
 mkdir ./install/agribot/configs -p
 cp -r $AGRIBOT_HOME/agribot/configs ./install/agribot
