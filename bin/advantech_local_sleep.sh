@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 while true; do
     if nc -l -s $1 -p 55786 | grep -q "sleep"; then

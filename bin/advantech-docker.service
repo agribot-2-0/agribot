@@ -1,0 +1,8 @@
+[Unit]
+
+[Service]
+ExecStart=/home/agribot1/agribot/bin/agribot_docker_start.sh
+User=agribot1
+
+[Install]
+WantedBy=default.target
