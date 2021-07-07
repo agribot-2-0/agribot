@@ -15,7 +15,7 @@
             "compilerPath": "/usr/bin/g++",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "compileCommands": "${workspaceFolder}/workspace/build_ws/build/compile_commands.json"
+            "compileCommands": "${workspaceFolder}/workspace/base_ws/build/compile_commands.json"
         }
     ],
     "version": 4
