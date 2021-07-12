@@ -4,7 +4,7 @@ After=NetworkManager.service time-sync.target advantech-can.service
 
 [Service]
 ExecStart=/home/agribot1/agribot/bin/agribot_start.sh
-ExecStop=/usr/local/bin/stop-ros.sh
+ExecStop=/home/agribot1/agribot/bin/agribot_stop.sh
 User=agribot1
 
 [Install]
