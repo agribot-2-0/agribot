@@ -11,7 +11,7 @@ elif [ "$1" == "jetson" ]
 then
     source $AGRIBOT_HOME/agribot/configs/setup.bash jetson
     roslaunch agribot_obstacle_detection detection_demo.launch
-else
+else # Advantech
     source $AGRIBOT_HOME/agribot/configs/setup.bash
     roslaunch hal_io_card hal_io_card.launch &
     sleep 5
