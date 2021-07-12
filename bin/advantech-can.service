@@ -1,7 +1,0 @@
-[Unit]
-
-[Service]
-ExecStart=/home/agribot1/agribot/bin/advantech_setup_can.sh
-
-[Install]
-WantedBy=default.target
