@@ -18,8 +18,8 @@ if [ ! -d "$(date +%d)" ]; then
 fi
 cd $(date +%d)
 if [ $# -eq 1 ]; then
-mkdir $1-$(date +%X)
-cd $1-$(date +%X)
+mkdir $(date +%X)-$1
+cd $(date +%X)-$1
 else
 mkdir $(date +%X)
 cd $(date +%X)
