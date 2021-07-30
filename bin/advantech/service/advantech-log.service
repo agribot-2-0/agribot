@@ -1,0 +1,8 @@
+[Unit]
+
+[Service]
+ExecStart=/home/agribot1/agribot/bin/agribot_logging_start.sh 
+ExecStop=/home/agribot1/agribot/bin/agribot_logging_stop.sh
+
+[Install]
+WantedBy=default.target

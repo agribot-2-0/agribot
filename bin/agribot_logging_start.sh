@@ -17,13 +17,10 @@ if [ ! -d "$(date +%d)" ]; then
     mkdir $(date +%d)
 fi
 cd $(date +%d)
-if [ $# -eq 1 ]; then
-mkdir $(date +%X)-$1
-cd $(date +%X)-$1
-else
+
 mkdir $(date +%X)
 cd $(date +%X)
-fi
+
 
 (rosbag record --quiet -a __name:=bag_record)  &
 (candump -L can0 > can0-$(date +%F)$(date +%X).log) &
