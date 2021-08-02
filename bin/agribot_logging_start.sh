@@ -5,23 +5,29 @@ if [ ! -d "logs" ];then
     mkdir logs
 fi
 cd logs
-if [ ! -d "$(date +%Y)" ]; then
-    mkdir $(date +%Y)
+export YEAR=$(date +%Y)
+if [ ! -d "$YEAR" ]; then
+    mkdir $YEAR
 fi
-cd $(date +%Y)
-if [ ! -d "$(date +%m)" ]; then
-    mkdir $(date +%m)
+cd $YEAR
+export MONTH=$(date +%m)
+if [ ! -d "$MONTH" ]; then
+    mkdir $MONTH
 fi
-cd $(date +%m)
-if [ ! -d "$(date +%d)" ]; then
-    mkdir $(date +%d)
+cd $MONTH
+export DAY=$(date +%d)
+if [ ! -d "$DAY" ]; then
+    mkdir $DAY
 fi
-cd $(date +%d)
+cd $DAY
+export HOUR=$(date +%X)
+mkdir $HOUR
+cd $HOUR
+    source $HOME/agribot/configs/setup.bash simulation
 
-mkdir $(date +%X)
-cd $(date +%X)
+(rosbag record --quiet -a __name:=bag_record)&
+(candump -L can0 > can0-$(date +%F)$(date +%X).log)&
+(candump -L can1 > can1-$(date +%F)$(date +%X).log)&
 
 
-(rosbag record --quiet -a __name:=bag_record)  &
-(candump -L can0 > can0-$(date +%F)$(date +%X).log) &
-(candump -L can1 > can1-$(date +%F)$(date +%X).log) &
+
