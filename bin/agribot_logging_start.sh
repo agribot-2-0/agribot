@@ -1,6 +1,9 @@
 #!/bin/bash
 
-cd $HOME
+export AGRIBOT_HOME=$HOME
+source $AGRIBOT_HOME/agribot/configs/setup.bash simulation
+
+cd $AGRIBOT_HOME
 if [ ! -d "logs" ];then
     mkdir logs
 fi
@@ -23,7 +26,6 @@ cd $DAY
 export HOUR=$(date +%X)
 mkdir $HOUR
 cd $HOUR
-    source $HOME/agribot/configs/setup.bash simulation
 
 (rosbag record --quiet -a __name:=bag_record)&
 (candump -L can0 > can0-$(date +%F)$(date +%X).log)&
