@@ -2,7 +2,6 @@
 
 [Service]
 Type=forking
-User=agribot1
 ExecStart=/bin/bash /home/agribot1/agribot/bin/agribot_logging_start.sh 
 ExecStop=/bin/bash /home/agribot1/agribot/bin/agribot_logging_stop.sh
 

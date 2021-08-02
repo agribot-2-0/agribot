@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 export AGRIBOT_HOME=$HOME
-source $AGRIBOT_HOME/agribot/configs/setup.bash simulation
+source $AGRIBOT_HOME/agribot/configs/setup.bash advantech
 
 cd $AGRIBOT_HOME
 if [ ! -d "logs" ];then
