@@ -2,9 +2,9 @@
 
 [Service]
 Type=forking
-User=michalina
-ExecStart=/bin/bash /home/michalina/agribot/bin/agribot_logging_start.sh 
-ExecStop=/bin/bash /home/michalina/agribot/bin/agribot_logging_stop.sh
+User=agribot1
+ExecStart=/bin/bash /home/agribot1/agribot/bin/agribot_logging_start.sh 
+ExecStop=/bin/bash /home/agribot1/agribot/bin/agribot_logging_stop.sh
 
 [Install]
 WantedBy=default.target
