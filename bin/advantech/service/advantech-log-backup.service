@@ -3,6 +3,5 @@
 [Service]
 ExecStart=/bin/bash /home/agribot1/agribot/workspace/base_ws/src/agribot_common/scripts/agribot_common/logs_backup/upload_to_drive.py 
 
-
 [Install]
 WantedBy=default.target
