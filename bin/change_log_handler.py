@@ -3,17 +3,19 @@ from posix import listdir
 import os
 from drive_api_handler import DriveApiHandler
 
-FULL_PATH = r"/home/michalina/"
-DIR_NAME = "logs"
-
 class ChangeLog:
     def __init__(self):
         self.drive_handler = DriveApiHandler()
         self.fileID = None
         self.drive_handler.checkForToken()
         self.checkFileId()
-        self.path = FULL_PATH + DIR_NAME
+        self.path = None
+        self.dir = None
 
+    def setDir(self,new_dir):
+        self.dir=new_dir
+    def setPath(self,new_path):
+        self.path = new_path + self.dir
 
     def checkFileId(self):
         items =  self.drive_handler.getResults()
