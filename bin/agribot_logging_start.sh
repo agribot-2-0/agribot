@@ -4,28 +4,15 @@ export AGRIBOT_HOME=$HOME
 source $AGRIBOT_HOME/agribot/configs/setup.bash advantech
 
 cd $AGRIBOT_HOME
-if [ ! -d "logs" ];then
-    mkdir logs
-fi
-cd logs
+
 export YEAR=$(date +%Y)
-if [ ! -d "$YEAR" ]; then
-    mkdir $YEAR
-fi
-cd $YEAR
 export MONTH=$(date +%m)
-if [ ! -d "$MONTH" ]; then
-    mkdir $MONTH
-fi
-cd $MONTH
 export DAY=$(date +%d)
-if [ ! -d "$DAY" ]; then
-    mkdir $DAY
-fi
-cd $DAY
 export HOUR=$(date +%X)
-mkdir $HOUR
-cd $HOUR
+
+
+mkdir -p "logs/$YEAR/$MONTH/$DAY/$HOUR/"
+cd logs/$YEAR/$MONTH/$DAY/$HOUR/
 
 (rosbag record --quiet -a __name:=bag_record)&
 (candump -L can0 > can0-$(date +%F)$(date +%X).log)&
