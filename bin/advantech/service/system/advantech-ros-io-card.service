@@ -1,0 +1,11 @@
+[Unit]
+Description=Ros launch control
+After=NetworkManager.service time-sync.target advantech-can.service
+
+[Service]
+Restart=on-failure
+ExecStart=/home/agribot1/agribot/workspace/hal_ws/install/hal_io_card/lib/hal_io_card/hal_io_card_start
+User=agribot1
+
+[Install]
+WantedBy=default.target

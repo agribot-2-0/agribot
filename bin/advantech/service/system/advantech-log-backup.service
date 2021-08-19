@@ -1,4 +1,5 @@
 [Unit]
+After=NetworkManager.service time-sync.target advantech-can.service advantech-ros.service
 
 [Service]
 ExecStart=/bin/bash /home/agribot1/agribot/bin/agribot_log_backup.sh
