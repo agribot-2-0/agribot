@@ -3,7 +3,7 @@ Description=Ros launch control
 After=NetworkManager.service time-sync.target advantech-can.service advantech-ros-io-card.service
 
 [Service]
-ExecStart=/home/agribot1/agribot/bin/agribot_start.sh
+ExecStart=/home/agribot1/agribot/bin/agribot_start.sh advantech
 ExecStop=/home/agribot1/agribot/bin/agribot_stop.sh
 User=agribot1
 
