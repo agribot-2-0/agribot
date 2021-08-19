@@ -14,11 +14,11 @@ then
 elif [ "$1" == "advantech" ]
 then
     source $AGRIBOT_HOME/agribot/configs/setup.bash advantech
-    roslaunch hal_io_card hal_io_card.launch &
-    sleep 5
-    killall roslaunch
-    sleep 10
     roslaunch agribot_bringup agribot_base.launch
+elif [ "$1" == "advantech_io_card" ]
+then
+    source $AGRIBOT_HOME/agribot/configs/setup.bash advantech
+    roslaunch hal_io_card hal_io_card.launch
 else
     echo "Platform should be specify in first argument"
 fi
