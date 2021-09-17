@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 rebuild='false'
 coverage='false'
 

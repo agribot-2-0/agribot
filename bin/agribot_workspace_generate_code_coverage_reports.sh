@@ -1,6 +1,5 @@
-
-
 #!/usr/bin/env bash
+
 cd $AGRIBOT_HOME/agribot/workspace/base_ws
 
 colcon test 
