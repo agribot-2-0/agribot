@@ -2,10 +2,15 @@
 rebuild='false'
 coverage='false'
 
-while getopts 'rc' flag; do 
+while getopts 'rch' flag; do 
     case "${flag}" in
         r ) rebuild='true' ;;
         c ) coverage='true' ;;
+        h ) echo "Usage:"
+            echo "[-h] prints usage"
+            echo "[-c] build with coverage reports"
+            echo "[-r] rebuild."
+            exit 1 ;;
         \? ) break ;;
     esac 
 done
