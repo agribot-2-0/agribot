@@ -7,8 +7,8 @@ while getopts 'rch' flag; do
         r ) rebuild='true' ;;
         c ) coverage='true' ;;
         h ) echo "Usage:"
-            echo "[-h] prints usage"
-            echo "[-c] build with coverage reports"
+            echo "[-h] print usage"
+            echo "[-c] build with coverage flags"
             echo "[-r] rebuild."
             exit 1 ;;
         \? ) break ;;
